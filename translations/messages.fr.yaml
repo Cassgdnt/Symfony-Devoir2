@@ -1,0 +1,33 @@
+Nav:
+  Produits: 'Produits'
+  Panier: 'Panier'
+
+Produit:
+  Liste: 'Liste des produits'
+  Nom: 'Nom'
+  Image: 'Image'
+  Qte: 'Quantité'
+  Prix: 'Prix'
+  Ajout: 'Ajouter au panier'
+  Aucun: "Il n'y aucun produit" 
+  Supprimer: 'Supprimer le produit'
+  Etat: 'Produit non acheté'
+  Etats: 'Produit acheté'
+
+FormulaireProduit:
+  Ajout: 'Ajouter un nouveau produit'
+  
+Nom: 'Nom'
+Image: 'Image'
+Qte : 'Quantité'
+Prix: 'Prix'
+Sauvegarder: 'Ajouter le produit'
+
+Panier:
+  Titre: 'Contenu du panier'
+  Nom: 'Nom'
+  Qte: 'Quantité'
+  Montant: 'Montant'
+  Supprimer: 'Supprimer du panier'
+  Aucun: "Il n'y a aucun produit dans le panier"
+  

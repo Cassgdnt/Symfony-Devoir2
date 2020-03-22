@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+<style>
+a{
+    color:black;
+    text-decoration:none;
+}
+a:hover{
+    color:black
+}
+</style>
+{% for message in app.flashes('success') %}
+<div class="alert alert-success">
+    {{message}}
+</div>
+{% endfor %}
+    <h1>{{'Produit.Liste'|trans}}</h1>
+
+    {% if produits is not empty %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{'Produit.Image'|trans}}</th>
+                    <th>{{'Produit.Nom'|trans}}</th>
+                    <th>{{'Produit.Qte'|trans}}</th>
+                    <th>{{'Produit.Prix'|trans}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in produits %}
+                    <tr>
+                        <td>
+                        {% if produit.image is not null %}
+                            <img src="{{asset('/uploads/' ~ produit.image)}}"> 
+                        {% endif %}
+                        </td>
+                        <td><a href="{{path('panier_add', {'id':produit.id})}}">{{produit.nom}}</a></td>
+                        <td>{{produit.qte}}</td>
+                        <td>{{produit.prix}} €</td>
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>{{'Produit.Aucun'|trans}}</p>
+    {% endif %}
+
+    <h2>{{'FormulaireProduit.Ajout'|trans}}</h2>
+    {{form(ajout_produit)}}
+{% endblock %}

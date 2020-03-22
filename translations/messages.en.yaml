@@ -1,0 +1,32 @@
+Nav:
+  Produits: 'Products'
+  Panier: 'Cart'
+
+Produit:
+  Liste: 'Products list'
+  Nom: 'Name'
+  Image: 'Image'
+  Qte: 'Quantity'
+  Prix: 'Price'
+  Ajout: 'Add to cart'
+  Aucun: "There is no product" 
+  Supprimer: 'Delete product'
+  Etat: 'product not bought'
+  Etats: 'product bought'
+
+FormulaireProduit:
+  Ajout: 'Add a new product'
+
+Nom: 'Name'
+Image: 'Image'
+Qte : 'Quantity'
+Prix: 'Price'
+Sauvegarder: 'Add the product'
+
+Panier:
+  Titre: 'Cart content'
+  Nom: 'Name'
+  Qte: 'Quantity'
+  Montant: 'Amount'
+  Supprimer: 'Remove from cart'
+  Aucun: "There are no products in the cart"

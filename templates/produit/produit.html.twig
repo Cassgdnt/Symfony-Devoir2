@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{produit.nom}}{% endblock %}
+
+{% block body %}
+<style>
+	a{
+    color:white;
+    text-decoration:none;
+}
+a:hover{
+    color:white;
+}
+</style>
+{% for message in app.flashes('success') %}
+<div class="alert alert-success">
+    {{message}}
+</div>
+{% endfor %}
+	<h1>{{produit.nom}}</h1>
+	{% if produit.image is not null %}
+        <img src="{{asset('/uploads/' ~ produit.image)}}"> 
+    {% endif %}
+
+<h2>{{'Produit.Qte' |trans}} : {{produit.qte}}</h2>
+<h2>{{'Produit.Prix' |trans}} : {{produit.prix}} €</h2>
+
+<hr>
+	<h2>{{'Produit.Ajout' |trans}}</h2>
+{{form(form_panier)}}
+	<button  class="btn btn-danger" ><a href="{{path('delete_produit', {'id':produit.id})}}">{{'Produit.Supprimer'|trans}}</a></button>
+{% endblock %}
