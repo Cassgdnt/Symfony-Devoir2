@@ -30,12 +30,11 @@ class ProduitController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
 
             $fichier =$form->get('ImageUpload')->getData();
-            // Si un fichier a été uploadé
             if($fichier){
                 $nomFichier = uniqid() . '.' . $fichier->guessExtension();
 
                 try{
-                    //On essaie de déplacer le fichier
+                    
                     $fichier->move(
                         $this->getParameter('upload_dir'),
                         $nomFichier
